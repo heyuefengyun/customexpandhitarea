@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class ExpandTapArea extends StatelessWidget {
+class CustomExpandTapArea extends StatelessWidget {
 
   final Function onTap;
   final double extraNumber;
@@ -12,7 +12,9 @@ class ExpandTapArea extends StatelessWidget {
   final Widget child;
 
   final GlobalKey childKey = GlobalKey();
-  ExpandTapArea({super.key, required this.onTap, this.extraNumber = 20, required this.child});
+  CustomExpandTapArea({super.key, required this.onTap, this.extraNumber = 20, required this.child});
+
+  ///其实本质就是TapRegion的用法
   @override
   Widget build(BuildContext context) {
     return TapRegionSurface(
@@ -44,7 +46,7 @@ class ExpandTapArea extends StatelessWidget {
               if (kDebugMode) {
                 print("在区域内点击");
               }
-            }, child: Container(key: childKey,child: child),
+            }, child: Center(child: Container(key: childKey,child: child)),
           ),
         ),
       ),
