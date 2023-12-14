@@ -1,0 +1,17 @@
+name: expand_hit_area
+description: expand the tap area  扩大点击区域 原理是TapRegion和TapRegionSurface.
+repository: https://github.com/malikwang/expand_tap_area
+homepage: https://github.com/malikwang/expand_tap_area
+
+version: 0.0.1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
